@@ -45,6 +45,20 @@
   </style>
 
   <script>
+    const img = document.querySelector("img")
+    const spacing = document.querySelector('#spacing')
+    const blur = document.querySelector('#blur')
+    const color = document.querySelector('#base')    
+    
+    function updateSpacing(e) {
+      img.style.padding = `${e.target.value}px`
+    }
+
+    function updateBlur(e) {
+      img.style.filter = `blur(${e.target.value}px)`
+    }
+    spacing.addEventListener("input", updateSpacing)
+    blur.addEventListener("input", updateBlur)
   </script>
 
 </body>
